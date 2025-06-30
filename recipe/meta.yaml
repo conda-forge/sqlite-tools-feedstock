@@ -46,7 +46,7 @@ outputs:
     test:
       commands:
         - sqldiff --help
-  - name: sqlite_rsync
+  - name: sqlite-rsync
     files:
       - bin/sqlite3_rsync              # [unix]
       - Library\bin\sqlite3_rsync.exe  # [win]
@@ -62,7 +62,7 @@ outputs:
     test:
       commands:
         - sqlite3_rsync --version
-  - name: sqlite_analyzer
+  - name: sqlite-analyzer
     files:
       - bin/sqlite3_analyze              # [unix]
       - Library\bin\sqlite3_analyze.exe  # [win]
