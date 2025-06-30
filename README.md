@@ -91,8 +91,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-sqldiff-green.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqldiff.svg)](https://anaconda.org/conda-forge/sqldiff) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite__analyzer-green.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite_analyzer.svg)](https://anaconda.org/conda-forge/sqlite_analyzer) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite__rsync-green.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite_rsync.svg)](https://anaconda.org/conda-forge/sqlite_rsync) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite--analyzer-green.svg)](https://anaconda.org/conda-forge/sqlite-analyzer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite-analyzer.svg)](https://anaconda.org/conda-forge/sqlite-analyzer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite-analyzer.svg)](https://anaconda.org/conda-forge/sqlite-analyzer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite-analyzer.svg)](https://anaconda.org/conda-forge/sqlite-analyzer) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-sqlite--rsync-green.svg)](https://anaconda.org/conda-forge/sqlite-rsync) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sqlite-rsync.svg)](https://anaconda.org/conda-forge/sqlite-rsync) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sqlite-rsync.svg)](https://anaconda.org/conda-forge/sqlite-rsync) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sqlite-rsync.svg)](https://anaconda.org/conda-forge/sqlite-rsync) |
 
 Installing sqlite-tools
 =======================
@@ -104,16 +104,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `sqldiff, sqlite_analyzer, sqlite_rsync` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `sqldiff, sqlite-analyzer, sqlite-rsync` can be installed with `conda`:
 
 ```
-conda install sqldiff sqlite_analyzer sqlite_rsync
+conda install sqldiff sqlite-analyzer sqlite-rsync
 ```
 
 or with `mamba`:
 
 ```
-mamba install sqldiff sqlite_analyzer sqlite_rsync
+mamba install sqldiff sqlite-analyzer sqlite-rsync
 ```
 
 It is possible to list all of the versions of `sqldiff` available on your platform with `conda`:
