@@ -1,10 +1,11 @@
-{% set version = "3.54.0" %}
+{% set version = "3.54.1" %}
 {% set year = "2026" %}
 {% set version_split = version.split(".") %}
 {% set major = version_split[0] %}
-{% set minor = version_split[1]|int * 10 %}
+{% set minor = version_split[1] %}
+{% set minor_coded = minor|int * 10 %}
 {% set bugfix = version_split[2]|int * 100 %}
-{% set version_coded=(major ~ (("%03d" % minor)|string) ~ (("%03d" % bugfix)|string)) %}
+{% set version_coded=(major ~ (("%03d" % minor_coded)|string) ~ (("%03d" % bugfix)|string)) %}
 
 package:
   name: sqlite-tools
@@ -12,11 +13,11 @@ package:
 
 source:
   url: https://www.sqlite.org/{{ year }}/sqlite-src-{{ version_coded }}.zip
-  sha256: 8847659821e0c5116bd14a94644c82ba932b2d9a05ac81af2e34af814aad7c58
+  sha256: 387e7f6cad4797b17848c07d453dc6606917bb356a6cfe5a3abafd38c240c71b
 
 build:
   skip: true  # [win and arm64]
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -25,7 +26,7 @@ requirements:
     - make  # [not win]
     - tcl >=9
   host:
-    - libsqlite >={{ version }}  # [not win]
+    - libsqlite {{ major }}.{{ minor }}.*  # [not win]
     - zlib                       # [not win]
     - tcl >=9
 
@@ -40,7 +41,7 @@ outputs:
         - {{ stdlib("c") }}
         - make  # [not win]
       host:
-        - libsqlite >={{ version }}  # [not win]
+        - libsqlite {{ major }}.{{ minor }}.*  # [not win]
         - zlib                       # [not win]
 
     test:
@@ -56,7 +57,7 @@ outputs:
         - {{ stdlib("c") }}
         - make  # [not win]
       host:
-        - libsqlite >={{ version }}  # [not win]
+        - libsqlite {{ major }}.{{ minor }}.*  # [not win]
         - zlib                       # [not win]
 
     test:
@@ -72,7 +73,7 @@ outputs:
         - {{ stdlib("c") }}
         - make  # [not win]
       host:
-        - libsqlite >={{ version }}  # [not win]
+        - libsqlite {{ major }}.{{ minor }}.*  # [not win]
         - zlib                       # [not win]
 
     test:
